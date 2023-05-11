@@ -7,7 +7,7 @@ const getImgSrc = () => {
   return new URL(`../assets/${props.img}.png`, import.meta.url);
 };
 const getImgSrcset = () => {
-  return `${new URL(`../assets/${props.img}.png`, import.meta.url)}, ${new URL(
+  return `${getImgSrc()}, ${new URL(
     `../assets/${props.img}@2x.png`,
     import.meta.url
   )} 2x`;

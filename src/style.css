@@ -1,7 +1,7 @@
 html {
   --r: 50px; /* control the size */
-  --c1: #c5cedf /*color 1*/ 99%, #0000 101%;
-  --c2: #fdeefd /*color 2*/ 99%, #0000 101%;
+  --c1: #b9ade6 /*color 1*/ 99%, #0000 101%;
+  --c2: #f7ddf7 /*color 2*/ 99%, #0000 101%;
 
   --s: calc(var(--r) * 0.866); /* .866 = cos(30deg) */
   --g0: radial-gradient(var(--r), var(--c1));
@@ -20,6 +20,6 @@ html {
     var(--g0) calc(-1 * var(--s)) calc(var(--r) / 2),
     var(--g1) calc(-1 * var(--s)) calc(var(--r) / -2),
     var(--g0) 0 calc(-1 * var(--r)), var(--g1) var(--s) calc(var(--r) / -2),
-    var(--g0) var(--s) calc(var(--r) / 2) #fdeefd; /*color 2 again here */
+    var(--g0) var(--s) calc(var(--r) / 2) #f7ddf7; /*color 2 again here */
   background-size: calc(4 * var(--s)) calc(6 * var(--r));
 }
