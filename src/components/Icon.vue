@@ -1,18 +1,28 @@
 <script setup>
-defineProps({
+const props = defineProps({
   label: String,
+  img: String,
 });
+const getImgSrc = () => {
+  return new URL(`../assets/${props.img}.png`, import.meta.url);
+};
+const getImgSrcset = () => {
+  return `${new URL(`../assets/${props.img}.png`, import.meta.url)}, ${new URL(
+    `../assets/${props.img}@2x.png`,
+    import.meta.url
+  )} 2x`;
+};
 </script>
 
 <template>
   <div class="icon-wrapper">
     <img
-      src="../assets/icon.png"
-      srcset="../assets/icon.png, ../assets/icon@2x.png 2x"
       class="icon"
-      :alt="label"
+      :src="getImgSrc()"
+      :srcset="getImgSrcset()"
+      :alt="props.label"
     />
-    <div class="label">{{ label }}</div>
+    <div class="label">{{ props.label }}</div>
   </div>
 </template>
 
